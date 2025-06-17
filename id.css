@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+     background: linear-gradient(135deg, #edafb8 60%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#Acc2 {
+    width: 400px;
+    height: 650px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    box-shadow: 
+        20px 20px 40px rgba(0,0,0,0.1),
+        -20px -20px 40px rgba(255,255,255,0.8),
+        inset 5px 5px 10px rgba(0,0,0,0.05);
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #2c3e50;
+}
+
+/* College Name */
+#Acc2 > a:first-child {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* College Logo */
+#college {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+#college:hover {
+    transform: scale(1.1);
+}
+
+#college img {
+    border-radius: 50%;
+    border: 4px solid #3498db;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Student Name */
+#name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    border: 2px solid #e74c3c;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Certificate Text */
+#CC {
+    font-family: 'Times New Roman', serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    border-left: 4px solid #f39c12;
+    white-space: pre-line;
+}
+
+/* Follow Button */
+#Acc1 {
+    background: linear-gradient(45deg, #42a5f5, #1e88e5);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#Acc1:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
+    background: linear-gradient(45deg, #1e88e5, #1565c0);
+}
+
+/* Message Button */
+#message {
+    background: linear-gradient(45deg, #66bb6a, #43a047);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(67, 160, 71, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#message:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 160, 71, 0.4);
+    background: linear-gradient(45deg, #43a047, #388e3c);
+}
+
+/* Social Media Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: coloums;
+    align-items: center;
+    gap: 30px;
+    margin-top: auto;
+    padding: 10px 0;
+}
+
+/* Social Media Links */
+#github, #linkdin {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+#github img, #linkdin img {
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    width: 35px;
+    height: 35px;
+}
+
+#github:hover img {
+    border-color: #333;
+    transform: scale(1.15) rotate(360deg);
+    box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+}
+
+#linkdin:hover img {
+    border-color: #0077b5;
+    transform: scale(1.15) rotate(360deg);
+    box-shadow: 0 4px 12px rgba(0, 119, 181, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #Acc2 {
+        width: 90%;
+        height: auto;
+        min-height: 600px;
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    #name {
+        font-size: 20px;
+    }
+    
+    #CC {
+        font-size: 11px;
+    }
+}
+
+/* Add a subtle animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+#Acc2 {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Add ID card hole punch effect */
+#Acc2::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 3px solid #bdc3c7;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
